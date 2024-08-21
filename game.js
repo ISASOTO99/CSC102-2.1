@@ -1,5 +1,6 @@
 console.log("hello world")
 function begingame(){
+    var result = document.getElementById("result")
     var aichoice = Math.random();
     aichoice = aichoice*2
     aichoice = Math.round(aichoice);
@@ -17,16 +18,16 @@ function begingame(){
     }
 
     if(aichoice == usernum){
-        alert("IT WAS A TIE")
+        result.innerHTML = "IT WAS A TIE"
     }
     else if (usernum == 0 && aichoice == 1){
-        alert("YOU LOSE")
+        result.innerHTML = "YOU LOSE"
     }else if(usernum == 1 && aichoice == 2){
-        alert("YOU LOSE")
+        result.innerHTML = " YOU LOSE"
     }else if (usernum == 2 && aichoice == 0){
-        alert("YOU LOSE")
+        result.innerHTML = "YOU LOSE"
     }else {
-        alert("YOU WON")
+        result.innerHTML = "YOU WIN"
     }
 
 }
